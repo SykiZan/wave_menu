@@ -70,12 +70,12 @@
   left: 0;
   right: 0;
   margin: 0 auto;
-  width: 120px;
 
-  bottom: -10px;
+  width: 140px;   // <-- a bit wider helps the curve read better
+  bottom: -11px;
+
   z-index: 1;
   pointer-events: none;
-
   transform-origin: 50% 100%;
 }
 
