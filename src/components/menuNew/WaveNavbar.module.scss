@@ -1,0 +1,87 @@
+.nav {
+  --nav-bg: #101425;
+  --page-bg: #ffffff;
+
+  height: 96px;
+  width: 100%;
+  background: var(--nav-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* allow wave to visually protrude below */
+  overflow: visible;
+  padding: 0 120px ;
+  
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 64px;
+  margin: 0;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+}
+
+/* behaves exactly like your BellWavePerfect2 .card */
+.card {
+  position: relative;
+
+  /* navbar item height */
+  height: 86px;
+
+  /* IMPORTANT: expand hover zone downward so wave exit is visible */
+  padding: 0 18px 0; /* <- hover zone includes drop area */
+
+  display: grid;
+  place-items: center;
+
+  // cursor: pointer;
+  user-select: none;
+}
+
+.link {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.9);
+  font: 700 18px/1.1 system-ui;
+  cursor: pointer;
+
+  position: relative;
+  z-index: 2;
+}
+
+/* IMPORTANT: keep SVG positioning purely in CSS (no motion y/transform) */
+.svg {
+  position: absolute;
+
+  /* center under the item */
+  left: 50%;
+  transform: translateX(-50%);
+
+  /* protrude below navbar */
+  bottom: -20px;
+
+  width: 200px;
+  height: 60px;
+
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* white cutout matches background under navbar */
+.path {
+  fill: var(--page-bg);
+  will-change: d;
+}
+
+
+.version{
+  color: #ffffff;
+  font-size: 40px;
+}

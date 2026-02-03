@@ -1,0 +1,51 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  min-height: 100vh;
+  background: #101425;
+}
+
+/* the "body" area from your screenshot */
+.bodyPanel {
+  /* must match wave fill (your --page-bg) */
+  background: #ffffff;
+
+  /* full height under navbar */
+  min-height: calc(100vh - 96px);
+
+  /* this is the rounded corner you want */
+  border-top-right-radius: 48px;
+
+  /* IMPORTANT: makes the rounding clean */
+  overflow: hidden;
+}
+
+/* optional inner padding */
+.inner {
+  padding: 80px 60px;
+  
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.menu {
+  display: flex;
+  background: #101425;
+  margin-bottom: 30px;
+  width: 100%;
+}
