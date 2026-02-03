@@ -13,6 +13,7 @@
 .bodyPanel {
   /* must match wave fill (your --page-bg) */
   background: #ffffff;
+  // background-color: blueviolet;
 
   /* full height under navbar */
   min-height: calc(100vh - 96px);
@@ -27,6 +28,9 @@
 /* optional inner padding */
 .inner {
   padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
   
 }
 
